@@ -9,10 +9,7 @@
         <body ng-controller="WebCtrl">
           <ul>
               <li style="list-style: none">
-                  <button ng-click="menu(0)">1</button>
-                  <button ng-click="menu(1)">2</button>
-                  <button ng-click="menu(2)">3</button>
-                  <button ng-click="menu(3)">4</button>
+                  <button ng-repeat="a in start" ng-click="menu($index)" ng-bind="a.id"></button>
               </li>
           </ul>
 
