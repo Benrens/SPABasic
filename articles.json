@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "menuID": 1,
+        "artText": "hoi Els"
+    },
+    {
+        "id": 2,
+        "menuID": 1,
+        "artText": "hoi Ben"
+    },
+    {
+        "id": 3,
+        "menuID": 1,
+        "artText": "hoi Walter"
+    }
+]

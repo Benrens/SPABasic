@@ -7,8 +7,13 @@ App.controller('WebCtrl', function ($scope, $http) {
             $scope.start = res.data;
         });
 
+    $http.get('articles.json')
+        .then(function (res) {
+            $scope.lijst = res.data;
+        });
+
     $http.get('/')
-        .then(function(){
+        .then(function () {
 
             $scope.menu = function (id) {
                 $scope.articles = $scope.start.slice(id, id + 1);
