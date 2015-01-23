@@ -3,25 +3,27 @@
 <head>
   <meta charset="utf-8">
   <title>Todos $http</title>
-  <link rel="stylesheet" href="style.css">
-  <script>document.write("<base href=\"" + document.location + "\" />");</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
   <script src="app.js"></script>
 </head>
-<body ng-controller="WebCtrl">
-  <ul>
-      <li style="list-style: none">
-          <a href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
-          <a href="#">4</a>
-      </li>
-  </ul>
+        <body ng-controller="WebCtrl">
+          <ul>
+              <li style="list-style: none">
+                  <button ng-click="menu(0)">1</button>
+                  <button ng-click="menu(1)">2</button>
+                  <button ng-click="menu(2)">3</button>
+                  <button ng-click="menu(3)">4</button>
+              </li>
+          </ul>
 
-  <ul>
-    <li ng-repeat="todo in todos">
-      {{todo.id}} - <em>{{todo.text}}</em>
-    </li>
-  </ul>
-</body>
+          <ul>
+            <li style="list-style: none" ng-repeat="article in articles">
+                {{article.text}}
+            </li>
+          </ul>
+        </body>
 </html>
+
+
+
