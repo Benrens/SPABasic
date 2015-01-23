@@ -1,4 +1,6 @@
-[{ "text":"learn angular", "done":true },
-{ "text":"build an angular app", "done":false},
-{ "text":"something", "done":false },
-{ "text":"another todo", "done":true }]
+[
+    { "id":1,"text":"test1"},
+    { "id":2,"text":"test2"},
+    { "id":3,"text":"test3"},
+    { "id":4,"text":"test4"}
+]

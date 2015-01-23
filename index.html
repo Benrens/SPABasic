@@ -10,8 +10,16 @@
 </head>
 <body ng-controller="WebCtrl">
   <ul>
-    <li ng-repeat="todo in todos">
+      <li style="list-style: none">
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+      </li>
+  </ul>
 
+  <ul>
+    <li ng-repeat="todo in todos">
       {{todo.text}} - <em>{{todo.done}}</em>
     </li>
   </ul>
