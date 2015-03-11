@@ -1,23 +1,17 @@
-var App = angular.module('App', []);
+angular.module('App', ['AjaxService'])
 
-App.controller('WebCtrl', function ($scope, $http) {
+.controller('WebCtrl', ['$scope', 'ajaxService', function ($scope, ajaxService) {
+    'use strict';
 
-    $http.get('web.json')
-        .then(function (res) {
-            $scope.start = res.data;
-        });
+	ajaxService.get('web.json', function(data){
+	   $scope.start = data;
+	});
 
-    $http.get('articles.json')
-        .then(function (res) {
-            $scope.lijst = res.data;
-        });
+    ajaxService.get('articles.json', function(data){
+       $scope.lijst = data;
+    });
 
-    $http.get('/')
-        .then(function () {
-
-            $scope.menu = function (id) {
-                $scope.articles = $scope.start.slice(id, id + 1);
-            }
-        });
-
-});
+    $scope.menu = function (id) {
+        $scope.articles = $scope.start.slice(id, id + 1);
+    };
+}]);
